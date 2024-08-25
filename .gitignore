@@ -1,3 +1,14 @@
+# Ankit
+
+*.log
+*.out
+*.pid
+*.pyc
+*.err
+*.log
+*.pid
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
