@@ -1,7 +1,6 @@
 from typing import Any, Optional
 
 import dlt
-import requests
 from dlt.common.pendulum import pendulum
 from dlt.sources.rest_api import (
     RESTAPIConfig,
@@ -9,69 +8,6 @@ from dlt.sources.rest_api import (
     rest_api_resources,
     rest_api_source,
 )
-
-def load_strava_athlete_activities() -> None:
-    access_token = dlt.secrets.get("strava.access_token")
-
-    pipeline = dlt.pipeline(
-        pipeline_name="rest_api_strava_athlete",
-        destination="duckdb",
-        dataset_name="rest_api_data",
-    )
-
-    def paginate_resource():
-        url = "https://www.strava.com/api/v3/athlete/activities"
-        headers = {
-            "Authorization": f"Bearer {access_token}"
-        }
-        params = {
-            "per_page": 200,
-            "page": 1
-        }
-
-        while True:
-            response = requests.get(url, headers=headers, params=params)
-            if response.status_code == 401:
-                raise Exception("Unauthorized: Check your access token.")
-            response.raise_for_status()
-            data = response.json()
-            if not data:
-                break
-            yield data
-            params["page"] += 1
-
-    strava_athlete_source = rest_api_source(
-        {
-            "client": {
-                "base_url": "https://www.strava.com/api/v3/",
-                "headers": {
-                    "Authorization": f"Bearer {access_token}"
-                }
-            },
-            "resource_defaults": {
-                "endpoint": {
-                    "params": {
-                        "per_page": 200,
-                    },
-                },
-            },
-            "resources": [
-                "athlete",
-                "athlete/activities",
-                "athlete/clubs",
-            ],
-        }
-    )
-
-    # Assign the custom paginator to the athlete/activities resource
-    strava_athlete_source["athlete/activities"] = paginate_resource
-
-    load_info = pipeline.run(strava_athlete_source)
-    print(load_info)
-
-
-
-
 
 def load_strava_athlete() -> None:
     client_id = dlt.secrets.get("strava.client_id")
@@ -116,9 +52,6 @@ def load_strava_athlete() -> None:
 if __name__ == "__main__":
     # load_pokemon()
     load_strava_athlete()
-    
-    # Call the function to load Strava athlete activities
-    load_strava_athlete_activities()
 
 
 
