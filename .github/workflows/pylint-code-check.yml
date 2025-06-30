@@ -34,6 +34,11 @@ jobs:
       - name: Pylint Score Badge Update
         run: |
           PYLINT_SCORE=$(grep -oP 'rated at \K[0-9]+\.[0-9]+' pylint_report.txt)
+          PYLINT_SCORE=$(grep -oP 'rated at \K[0-9]+\.[0-9]+' pylint_report.txt)
+          if [[ -z "$PYLINT_SCORE" ]]; then
+            echo "⚠️ Could not extract Pylint score. Check if pylint_report.txt contains 'rated at ...'"
+            exit 1
+          fi
           echo "Pylint Score: $PYLINT_SCORE"
 
           # Determine badge color based on score
