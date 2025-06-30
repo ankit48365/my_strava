@@ -1,0 +1,20 @@
+************* Module main
+main.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+main.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module dlt_strava_bigquery_extn
+dlt_strava_bigquery_extn.py:80:0: C0304: Final newline missing (missing-final-newline)
+dlt_strava_bigquery_extn.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+dlt_strava_bigquery_extn.py:3:0: E0401: Unable to import 'dlt' (import-error)
+dlt_strava_bigquery_extn.py:4:0: E0401: Unable to import 'dlt.common.pendulum' (import-error)
+dlt_strava_bigquery_extn.py:5:0: E0401: Unable to import 'dlt.sources.rest_api' (import-error)
+dlt_strava_bigquery_extn.py:13:0: C0116: Missing function or method docstring (missing-function-docstring)
+dlt_strava_bigquery_extn.py:17:4: W0612: Unused variable 'client_id' (unused-variable)
+dlt_strava_bigquery_extn.py:18:4: W0612: Unused variable 'client_secret' (unused-variable)
+dlt_strava_bigquery_extn.py:63:0: C0116: Missing function or method docstring (missing-function-docstring)
+dlt_strava_bigquery_extn.py:1:0: W0611: Unused Optional imported from typing (unused-import)
+dlt_strava_bigquery_extn.py:4:0: W0611: Unused pendulum imported from dlt.common.pendulum (unused-import)
+dlt_strava_bigquery_extn.py:5:0: W0611: Unused rest_api_source imported from dlt.sources.rest_api (unused-import)
+
+-----------------------------------
+Your code has been rated at 0.00/10
+
