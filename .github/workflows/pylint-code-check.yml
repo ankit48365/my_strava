@@ -29,11 +29,10 @@ jobs:
 
       - name: Run pylint
         run: |
-          pylint app/ > pylint_report.txt || true
+          pylint . > pylint_report.txt || true
 
       - name: Pylint Score Badge Update
         run: |
-          PYLINT_SCORE=$(grep -oP 'rated at \K[0-9]+\.[0-9]+' pylint_report.txt)
           PYLINT_SCORE=$(grep -oP 'rated at \K[0-9]+\.[0-9]+' pylint_report.txt)
           if [[ -z "$PYLINT_SCORE" ]]; then
             echo "⚠️ Could not extract Pylint score. Check if pylint_report.txt contains 'rated at ...'"
