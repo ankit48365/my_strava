@@ -1,0 +1,6 @@
+************* Module dlt_strava_bigquery_extn
+dlt_strava_bigquery_extn.py:9:0: E0401: Unable to import 'dlt.sources.rest_api' (import-error)
+
+-----------------------------------
+Your code has been rated at 7.92/10
+
