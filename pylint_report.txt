@@ -1,9 +1,6 @@
 ************* Module dlt_strava_bigquery_extn
-dlt_strava_bigquery_extn.py:8:42: C0303: Trailing whitespace (trailing-whitespace)
-dlt_strava_bigquery_extn.py:7:0: E0401: Unable to import 'dlt' (import-error)
 dlt_strava_bigquery_extn.py:9:0: E0401: Unable to import 'dlt.sources.rest_api' (import-error)
-dlt_strava_bigquery_extn.py:5:0: W0611: Unused Optional imported from typing (unused-import)
 
 -----------------------------------
-Your code has been rated at 5.00/10
+Your code has been rated at 7.92/10
 
