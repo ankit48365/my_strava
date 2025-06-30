@@ -8,8 +8,9 @@
 ## Initial Setup steps
 
 ```
- 2000  uv init
- 2001  uv add dlt[bigquery]
- 2002  clear
- 2003  dlt init rest_api bigquery
+uv init
+uv add dlt[bigquery]
+dlt init rest_api bigquery
+uv run dlt_strava_bigquery_extn.py
+
 ```
