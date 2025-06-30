@@ -1,21 +1,27 @@
+"""docstring for dlt_strava_bigquery_extn.py, 
+   a DLT source for Strava data, 
+   which can be loaded into BigQuery.
+"""
 from typing import Any, Optional
 
-import dlt
-from dlt.common.pendulum import pendulum
+import dlt # type: ignore[import-error]
+# from dlt.common.pendulum import pendulum 
 from dlt.sources.rest_api import (
     RESTAPIConfig,
     check_connection,
     rest_api_resources,
-    rest_api_source,
+    # rest_api_source,
 )
 
 @dlt.source(name="strava")
 def strava_source() -> Any:
+    """this function defines the Strava source for DLT.
+    It uses the DLT REST API source functionality to connect to Strava's API."""
     # === manually fetch the secrets dict ===
     sec = dlt.secrets.get("sources.strava")
     access_token  = sec["access_token"]
-    client_id     = sec["client_id"]
-    client_secret = sec["client_secret"]
+    # client_id     = sec["client_id"]
+    # client_secret = sec["client_secret"]
     # (you can also pull refresh_token if you plan to refresh)
 
 
@@ -55,12 +61,13 @@ def strava_source() -> Any:
             }
         ],
     }
-    # print("Access token in use:", access_token)
-    # print("DLT sees:", dlt.secrets.get("sources.strava"))
+    print("Access token in use:", access_token)
+    print("DLT sees:", dlt.secrets.get("sources.strava"))
 
     yield from rest_api_resources(config)
 
 def load_strava() -> None:
+    """this function initializes the DLT pipeline and runs it to load Strava data into BigQuery."""
     pipeline = dlt.pipeline(
         pipeline_name="strava_pipeline",
         destination="bigquery",

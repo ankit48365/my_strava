@@ -7,7 +7,9 @@
 
 ## Initial Setup steps
 
+```
  2000  uv init
  2001  uv add dlt[bigquery]
  2002  clear
  2003  dlt init rest_api bigquery
+```
