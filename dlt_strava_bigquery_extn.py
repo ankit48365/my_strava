@@ -2,16 +2,16 @@
    a DLT source for Strava data, 
    which can be loaded into BigQuery.
 """
-from typing import Any, Optional
+from typing import Any #, Optional
 
-import dlt # type: ignore[import-error]
-# from dlt.common.pendulum import pendulum 
+import dlt # pylint: disable=import-error
+# from dlt.common.pendulum import pendulum
 from dlt.sources.rest_api import (
     RESTAPIConfig,
     check_connection,
     rest_api_resources,
     # rest_api_source,
-)
+) # pylint: disable=import-error
 
 @dlt.source(name="strava")
 def strava_source() -> Any:
