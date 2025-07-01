@@ -13,6 +13,8 @@ from dlt.sources.rest_api import ( # pylint: disable=import-error
     # rest_api_source,
 )
 
+# logging.basicConfig(level=logging.DEBUG)
+
 @dlt.source(name="strava")
 def strava_source() -> Any:
     """this function defines the Strava source for DLT.
@@ -61,8 +63,8 @@ def strava_source() -> Any:
             }
         ],
     }
-    print("Access token in use:", access_token)
-    print("DLT sees:", dlt.secrets.get("sources.strava"))
+    # print("Access token in use:", access_token)
+    # print("DLT sees:", dlt.secrets.get("sources.strava"))
 
     yield from rest_api_resources(config)
 
