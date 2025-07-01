@@ -21,3 +21,7 @@ uv run dlt_strava_bigquery_extn.py
 ## Looker Studio
 
 https://lookerstudio.google.com/u/0/navigation/reporting
+
+## Github action Pylint
+
+will only run when commit message has this string "CheckCodeQuality"
