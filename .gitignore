@@ -9,8 +9,8 @@
 *.pid
 .dlt/secrets.toml
 .dlt/temp_secret.toml
-pylint_report.txt
-README.md
+# pylint_report.txt
+# README.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

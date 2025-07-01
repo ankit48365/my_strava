@@ -1,0 +1,19 @@
+************* Module strava_authorize
+strava_authorize.py:58:0: C0304: Final newline missing (missing-final-newline)
+strava_authorize.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+strava_authorize.py:2:0: E0401: Unable to import 'requests' (import-error)
+strava_authorize.py:5:0: E0401: Unable to import 'dlt' (import-error)
+strava_authorize.py:15:0: C0116: Missing function or method docstring (missing-function-docstring)
+strava_authorize.py:25:0: C0116: Missing function or method docstring (missing-function-docstring)
+strava_authorize.py:25:18: W0621: Redefining name 'code' from outer scope (line 54) (redefined-outer-name)
+strava_authorize.py:35:0: C0116: Missing function or method docstring (missing-function-docstring)
+strava_authorize.py:35:24: W0621: Redefining name 'access_token' from outer scope (line 55) (redefined-outer-name)
+strava_authorize.py:35:38: W0621: Redefining name 'refresh_token' from outer scope (line 55) (redefined-outer-name)
+strava_authorize.py:45:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+strava_authorize.py:50:4: C0103: Constant name "auth_url" doesn't conform to UPPER_CASE naming style (invalid-name)
+strava_authorize.py:3:0: C0411: standard import "urllib.parse" should be placed before third party import "requests" (wrong-import-order)
+strava_authorize.py:4:0: C0411: standard import "os" should be placed before third party import "requests" (wrong-import-order)
+
+-----------------------------------
+Your code has been rated at 6.07/10
+
