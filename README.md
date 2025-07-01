@@ -1,4 +1,4 @@
-![pylint](https://img.shields.io/badge/pylint-7.92-yellow)
+![pylint](https://img.shields.io/badge/pylint-6.07-red)
 ![CurrentLocal](https://img.shields.io/badge/machine-Latitude-brightgreen)
 
 # my_strava
