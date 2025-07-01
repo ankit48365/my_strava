@@ -5,7 +5,6 @@
 from typing import Any ,Optional
 
 import dlt # pylint: disable=import-error
-# from dlt.sources.helpers.rest_client.paginators import PageNumberPaginatorConfig # pylint: disable=import-error
 from dlt.sources.helpers.rest_client.paginators import PageNumberPaginator # pylint: disable=import-error
 from dlt.common.pendulum import pendulum # pylint: disable=import-error
 from dlt.sources.rest_api import ( # pylint: disable=import-error
@@ -14,10 +13,6 @@ from dlt.sources.rest_api import ( # pylint: disable=import-error
     rest_api_resources,
     # rest_api_source,
 )
-# below not part of DLT template
-# from dlt.sources.helpers.rest_client.paginators import PageNumberPaginator
-
-
 
 @dlt.source(name="strava")
 def strava_source() -> Any:
@@ -52,8 +47,7 @@ def strava_source() -> Any:
                 "name": "activities",
                 "endpoint": {
                     "path": "athlete/activities",
-
-
+                    ############# Comment out from here for initial load ####################
                     "params": {
                         # "per_page": 100, # Strava API supports pagination with per_page
                         "sort": "start_date", #2025-06-29 12:19:47 UTC",
@@ -66,13 +60,12 @@ def strava_source() -> Any:
                         "cursor_path": "start_date",
                         "initial_value": pendulum.today().subtract(days=30).to_iso8601_string()
                     },
-
+                    ############# Comment out until here for initial load ####################
                 },
             }
         ],
     }
-    print("Access token in use:", access_token)
-    # print("DLT sees:", dlt.secrets.get("sources.strava"))
+    # print("Access token in use:", access_token) # bring this back, to check if code is able to access the secrets
 
     yield from rest_api_resources(config)
 

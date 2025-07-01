@@ -1,3 +1,5 @@
+# pylint: skip-file
+
 """template for a dlt source using REST API.
 This template can be used to create a DLT source that connects to a REST API."""
 

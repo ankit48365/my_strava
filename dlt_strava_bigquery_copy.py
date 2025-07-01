@@ -1,3 +1,5 @@
+# pylint: skip-file
+
 """docstring for dlt_strava_bigquery_extn.py, 
    a DLT source for Strava data, 
    which can be loaded into BigQuery.
