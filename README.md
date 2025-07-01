@@ -10,12 +10,16 @@ Tech Stack used in this Project
       <td align="center"><img src="./image/bigquery2.png" width="50"/></td>
       <td align="center"><img src="./image/github-svgrepo-com (1).png" width="50"/></td>
       <td align="center"><img src="./image/looker.png" width="50"/></td>
+      <td align="center"><img src="./image/strava-logo-png-4.png" width="50"/></td>
     </tr>
   </table>
 </div>
 
 <a href="https://lookerstudio.google.com/reporting/f472dda8-c0e5-45c6-a52f-95eee12d3e1a">My Strava Stats Dashboard Link</a>
 
+### High Level Conceptual Data Flow Diagram:
+
+![The Idea!!](image/strava_pipeline.png "System Designn Overview")
 
 ### Initial Setup steps
 

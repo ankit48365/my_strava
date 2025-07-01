@@ -39,7 +39,7 @@ def strava_source() -> Any:
             "endpoint": {
                 "params": {
                     "per_page": 200 # Strava API supports max 200 per page
-                }, 
+                },
             },
         },
         "resources": [
