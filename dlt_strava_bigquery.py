@@ -2,10 +2,10 @@
    a DLT source for Strava data, 
    which can be loaded into BigQuery.
 """
-from typing import Any ,Optional
+from typing import Any #,Optional
 
 import dlt # pylint: disable=import-error
-from dlt.sources.helpers.rest_client.paginators import PageNumberPaginator # pylint: disable=import-error
+# from dlt.sources.helpers.rest_client.paginators import PageNumberPaginator # pylint: disable=import-error
 from dlt.common.pendulum import pendulum # pylint: disable=import-error
 from dlt.sources.rest_api import ( # pylint: disable=import-error
     RESTAPIConfig,
@@ -52,7 +52,7 @@ def strava_source() -> Any:
                         # "per_page": 100, # Strava API supports pagination with per_page
                         "sort": "start_date", #2025-06-29 12:19:47 UTC",
                         "direction": "desc", # Not needed for Strava
-                        "since": "{incremental.start_value}", # This is a special parameter to incrementally load data from the API.
+                        "since": "{incremental.start_value}",
                         # "limit": 1000,
                         # "after": "{incremental.start_value}"
                     },
@@ -65,7 +65,7 @@ def strava_source() -> Any:
             }
         ],
     }
-    # print("Access token in use:", access_token) # bring this back, to check if code is able to access the secrets
+    # print("Access token in use:", access_token)
 
     yield from rest_api_resources(config)
 
