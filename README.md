@@ -32,11 +32,11 @@ uv run dlt_strava_bigquery_extn.py
 ``` 
 
 ### Day today 
-
+```
 Run ~strava_authorize.py to refresh access code for strava api
 Access Code, Client ID, Secret etc shared here ~ .dlt/secrets.toml
 Pylint will only run when commit message has this string "CheckCodeQuality"
-
+```
 ### Looker Studio Portal
 
 <a href="https://lookerstudio.google.com/u/0/navigation/reporting">Looker Studio Editor Link</a>
