@@ -10,7 +10,10 @@ permissions:
 
 jobs:
   pylint:
+
+    if: contains(github.event.head_commit.message, 'CheckCodeQuality')
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
