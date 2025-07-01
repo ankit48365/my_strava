@@ -1,8 +1,12 @@
+"""docstring for strava_authorize.py
+   A script to authorize Strava API access and update DLT secrets.
+   It opens a browser for user authorization, retrieves access and refresh tokens,
+   and updates the DLT secrets file."""
 import webbrowser
-import requests
+import requests # pylint: disable=import-error
 import urllib.parse
 import os
-import dlt
+import dlt # pylint: disable=import-error
 
 
 sec = dlt.secrets.get("sources.strava")
@@ -13,6 +17,7 @@ SCOPES = "activity:read_all"
 TEMP_SECRET_PATH = ".dlt/temp_secret.toml"
 
 def build_auth_url():
+    """Builds the Strava authorization URL with required parameters."""
     params = urllib.parse.urlencode({
         "client_id": CLIENT_ID,
         "response_type": "code",
@@ -23,6 +28,7 @@ def build_auth_url():
     return f"https://www.strava.com/oauth/authorize?{params}"
 
 def exchange_code(code):
+    """Exchanges the authorization code for access and refresh tokens."""
     res = requests.post("https://www.strava.com/oauth/token", data={
         "client_id": CLIENT_ID,
         "client_secret": CLIENT_SECRET,
@@ -33,6 +39,7 @@ def exchange_code(code):
     return res.json()["access_token"], res.json()["refresh_token"]
 
 def update_secrets_file(access_token, refresh_token):
+    """Updates the DLT secrets file with the new access and refresh tokens."""
     lines = [
         "[sources.strava]",
         f'access_token  = "{access_token}"',
@@ -47,6 +54,7 @@ def update_secrets_file(access_token, refresh_token):
     print(f"✅ Updated {TEMP_SECRET_PATH} with new credentials.")
 
 if __name__ == "__main__":
+    """Main function to handle the authorization flow."""
     auth_url = build_auth_url()
     print("🌐 Opening browser for Strava authorization...")
     webbrowser.open(auth_url)
