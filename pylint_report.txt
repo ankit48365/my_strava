@@ -7,9 +7,7 @@ strava_authorize.py:57:4: W0105: String statement has no effect (pointless-strin
 strava_authorize.py:58:4: C0103: Constant name "auth_url" doesn't conform to UPPER_CASE naming style (invalid-name)
 strava_authorize.py:7:0: C0411: standard import "urllib.parse" should be placed before third party import "requests" (wrong-import-order)
 strava_authorize.py:8:0: C0411: standard import "os" should be placed before third party import "requests" (wrong-import-order)
-************* Module dlt_strava_bigquery
-dlt_strava_bigquery.py:42:18: C0303: Trailing whitespace (trailing-whitespace)
 
 -----------------------------------
-Your code has been rated at 8.39/10
+Your code has been rated at 8.46/10
 
