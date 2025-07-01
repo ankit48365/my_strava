@@ -8,6 +8,7 @@
 *.log
 *.pid
 .dlt/secrets.toml
+.dlt/temp_secret.toml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

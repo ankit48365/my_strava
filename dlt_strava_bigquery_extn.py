@@ -6,12 +6,12 @@ from typing import Any #, Optional
 
 import dlt # pylint: disable=import-error
 # from dlt.common.pendulum import pendulum
-from dlt.sources.rest_api import (
+from dlt.sources.rest_api import ( # pylint: disable=import-error
     RESTAPIConfig,
     check_connection,
     rest_api_resources,
     # rest_api_source,
-) # pylint: disable=import-error
+)
 
 @dlt.source(name="strava")
 def strava_source() -> Any:
