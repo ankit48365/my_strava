@@ -10,19 +10,10 @@ This guide explains how to use all the scripts in the correct sequence to ensure
 | `refresh_strava_token.py` | Refresh expired access tokens | When access token expires (every 6 hours) |
 | `test_strava_token.py` | Test token validity and permissions | Before running pipeline to verify setup |
 | `dlt_strava_bigquery.py` | Main pipeline script | Load Strava data into BigQuery |
-| `run_strava_pipeline.py` | **Master script** - runs everything in sequence | **Recommended for regular use** |
+
 
 ## 🚀 Quick Start (Recommended)
 
-### For Regular Pipeline Runs
-```bash
-uv run run_strava_pipeline.py
-```
-
-This master script automatically:
-1. Refreshes your Strava access token
-2. Tests the token permissions
-3. Runs the main pipeline
 
 ## 📋 Manual Step-by-Step Process
 
@@ -144,3 +135,40 @@ uv run dlt_strava_bigquery.py
 | Missing permissions | `uv run strava_authorize.py` |
 | BigQuery errors | Check `.dlt/secrets.toml` credentials |
 | General issues | `uv run run_strava_pipeline.py` |
+
+
+#### Big Query Notes
+
+ - uses ak83 gmail account 
+ - https://console.cloud.google.com/
+
+##### ./dlt/Config.toml should have tis section
+
+```python
+[destination.bigquery]
+location = "northamerica-northeast1"
+```
+
+##### ./dlt/secrets.toml
+Get these from Google Cloud Console > IAM & Admin > Service Accounts  , delete any old key, becuase its only used here, {ensure its mydataswamp project in cloud} , download new json and get below stuff out of it
+
+```python
+[destination.bigquery.credentials]
+# BigQuery credentials - you need to fill these in with your actual values
+# Get these from Google Cloud Console > IAM & Admin > Service Accounts
+project_id = "mystrava-464501"
+private_key = "-----BEGIN PRIVATE KEY-----\nMIIVvEEH5Uv8=\n-----END PRIVATE KEY-----\n"
+client_email = "sv-account-strava@mystrava-464501.iam.gserviceaccount.com"
+```
+
+##### Check dataset
+
+run below code {PS D:\mygit\my_strava> uv run check_dataset_location.py  }
+
+```python
+                                                                                                                  
+Dataset: landing
+Project: mystrava-464501
+Location: northamerica-northeast1
+Full ID: mystrava-464501:landing
+```
