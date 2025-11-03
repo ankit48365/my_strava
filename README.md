@@ -32,6 +32,11 @@ uv run dlt_strava_bigquery_extn.py
 ``` 
 
 ### Day today 
+standard day today
+```
+refresh_strava_token.py {creates new access token in temp_secret.toml} >>  dlt_strava_bigquery.py {after replacing access toekn in secret.toml}
+```
+if visitng after many days then run authorize one as below to open web authorization
 ```
 Run ~strava_authorize.py to refresh access code for strava api
 Access Code, Client ID, Secret etc shared here ~ .dlt/secrets.toml
