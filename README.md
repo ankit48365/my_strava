@@ -44,6 +44,24 @@ Run ~strava_authorize.py to refresh access code for strava api
 Access Code, Client ID, Secret etc shared here ~ .dlt/secrets.toml
 Pylint will only run when commit message has this string "CheckCodeQuality"
 ```
+
+### BigQuery Portal
+
+<a href="https://console.cloud.google.com/>BigQuery Link</a>
+
+Rahukaal view
+
+```
+
+CREATE OR REPLACE VIEW landing.v_rahuKaal AS
+SELECT
+  TIMESTAMP(JSON_VALUE(REPLACE(rahukaal.output, "'", '"'), '$.starts_at')) AS starts_at,
+  TIMESTAMP(JSON_VALUE(REPLACE(rahuKaal.output, "'", '"'), '$.ends_at')) AS ends_at,
+  date, location.city, location.latitude, location.longitude, location.state, location.country
+FROM `landing.rahu_kaal`;
+```
+
+
 ### Looker Studio Portal
 
 <a href="https://lookerstudio.google.com/u/0/navigation/reporting">Looker Studio Editor Link</a>

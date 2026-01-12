@@ -1,0 +1,722 @@
+[
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-11",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-11 15:21:12.250000\", \"ends_at\": \"2026-01-11 16:30:23\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-13",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-13 14:13:32.750000\", \"ends_at\": \"2026-01-13 15:23:05.875000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-14",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-14 11:54:49\", \"ends_at\": \"2026-01-14 13:04:33.750000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-15",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-15 13:05:08\", \"ends_at\": \"2026-01-15 14:15:05\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-16",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-16 10:45:22.250000\", \"ends_at\": \"2026-01-16 11:55:32\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-17",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-17 09:35:07.500000\", \"ends_at\": \"2026-01-17 10:45:30.250000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-18",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-18 15:28:00.875000\", \"ends_at\": \"2026-01-18 16:38:37\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-19",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-19 08:24:02\", \"ends_at\": \"2026-01-19 09:34:52\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-20",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-20 14:18:58.750000\", \"ends_at\": \"2026-01-20 15:30:02.875000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-21",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-21 11:57:08.500000\", \"ends_at\": \"2026-01-21 13:08:27.125000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-22",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-22 13:08:59.125000\", \"ends_at\": \"2026-01-22 14:20:32.750000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-23",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-23 10:45:53.625000\", \"ends_at\": \"2026-01-23 11:57:42.500000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-24",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-24 09:33:49\", \"ends_at\": \"2026-01-24 10:45:53.500000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-25",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-25 15:35:14.625000\", \"ends_at\": \"2026-01-25 16:47:35\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-26",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-26 08:20:37.625000\", \"ends_at\": \"2026-01-26 09:33:14.250000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-27",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-27 14:24:27.750000\", \"ends_at\": \"2026-01-27 15:37:20.875000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-28",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-28 11:58:54\", \"ends_at\": \"2026-01-28 13:12:04\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-29",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-29 13:12:33\", \"ends_at\": \"2026-01-29 14:26:00\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-30",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-30 10:45:32.500000\", \"ends_at\": \"2026-01-30 11:59:17\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-01-31",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-01-31 09:31:23.250000\", \"ends_at\": \"2026-01-31 10:45:25.375000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-01",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-01 15:42:37\", \"ends_at\": \"2026-02-01 16:56:57\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-02",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-02 08:15:51.125000\", \"ends_at\": \"2026-02-02 09:30:29.250000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-03",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-03 14:29:47\", \"ends_at\": \"2026-02-03 15:44:43.500000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-04",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-04 12:00:01\", \"ends_at\": \"2026-02-04 13:15:16\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-05",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-05 13:15:41.375000\", \"ends_at\": \"2026-02-05 14:31:15.250000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-06",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-06 10:44:19.625000\", \"ends_at\": \"2026-02-06 12:00:12.500000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-07",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-07 09:27:53.250000\", \"ends_at\": \"2026-02-07 10:44:05.375000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-08",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-08 15:49:55.500000\", \"ends_at\": \"2026-02-08 17:06:27\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-09",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-09 08:09:51.125000\", \"ends_at\": \"2026-02-09 09:26:42.250000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-10",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-10 14:34:48.250000\", \"ends_at\": \"2026-02-10 15:51:59.125000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-11",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-11 12:00:28\", \"ends_at\": \"2026-02-11 13:17:58.750000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-12",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-12 13:18:19.375000\", \"ends_at\": \"2026-02-12 14:36:10.250000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-13",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-13 10:42:17.375000\", \"ends_at\": \"2026-02-13 12:00:28.500000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-14",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-14 09:23:24.750000\", \"ends_at\": \"2026-02-14 10:41:56.125000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-15",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-15 15:57:02\", \"ends_at\": \"2026-02-15 17:15:54\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-16",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-16 08:02:45.625000\", \"ends_at\": \"2026-02-16 09:21:58.250000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-17",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-17 14:39:27.250000\", \"ends_at\": \"2026-02-17 15:59:00.625000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-18",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-18 12:00:16\", \"ends_at\": \"2026-02-18 13:20:10.250000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-19",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-19 13:20:26.625000\", \"ends_at\": \"2026-02-19 14:40:41.750000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-20",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-20 10:39:29.750000\", \"ends_at\": \"2026-02-20 12:00:06\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-21",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-21 09:18:05\", \"ends_at\": \"2026-02-21 10:39:02.500000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-22",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-22 16:03:49.250000\", \"ends_at\": \"2026-02-22 17:25:08\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-23",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-23 07:54:45.125000\", \"ends_at\": \"2026-02-23 09:16:25.250000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-24",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-24 14:43:40\", \"ends_at\": \"2026-02-24 16:05:41.500000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-25",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-25 11:59:28.500000\", \"ends_at\": \"2026-02-25 13:21:51.625000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-26",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-26 13:22:03.750000\", \"ends_at\": \"2026-02-26 14:44:48.500000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-27",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-27 10:36:02.125000\", \"ends_at\": \"2026-02-27 11:59:08.500000\"}"
+    }
+  },
+  {
+    "location": {
+      "city": "Concord",
+      "state": "New Hampshire",
+      "country": "United States",
+      "latitude": 43.2081,
+      "longitude": -71.5376,
+      "timezone": -5
+    },
+    "date": "2026-02-28",
+    "rahuKaal": {
+      "statusCode": 200,
+      "output": "{\"starts_at\": \"2026-02-28 09:12:01.250000\", \"ends_at\": \"2026-02-28 10:35:29.375000\"}"
+    }
+  }
+]
