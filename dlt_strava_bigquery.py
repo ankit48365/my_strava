@@ -47,20 +47,9 @@ def strava_source() -> Any:
                 "name": "activities",
                 "endpoint": {
                     "path": "athlete/activities",
-                    ############# Comment out from here for initial load ####################
                     "params": {
-                        # "per_page": 100, # Strava API supports pagination with per_page
-                        "sort": "start_date", #2025-06-29 12:19:47 UTC",
-                        "direction": "desc", # Not needed for Strava
-                        "since": "{incremental.start_value}",
-                        # "limit": 1000,
-                        # "after": "{incremental.start_value}"
+                        "per_page": 200 # Strava API supports max 200 per page
                     },
-                    "incremental": {
-                        "cursor_path": "start_date",
-                        "initial_value": pendulum.today().subtract(days=30).to_iso8601_string()
-                    },
-                    ############# Comment out until here for initial load ####################
                 },
             }
         ],
