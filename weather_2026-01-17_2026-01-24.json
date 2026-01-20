@@ -1,0 +1,98 @@
+[
+  {
+    "date": "2026-01-17",
+    "city": "Concord",
+    "state": "New Hampshire",
+    "country": "United States",
+    "latitude": 43.2081,
+    "longitude": -71.5376,
+    "temp_max_f": 30.2,
+    "temp_min_f": 19.9,
+    "windspeed_max_mph": 6.3,
+    "precipitation_in": 0.252
+  },
+  {
+    "date": "2026-01-18",
+    "city": "Concord",
+    "state": "New Hampshire",
+    "country": "United States",
+    "latitude": 43.2081,
+    "longitude": -71.5376,
+    "temp_max_f": 32.0,
+    "temp_min_f": 24.0,
+    "windspeed_max_mph": 5.0,
+    "precipitation_in": 0.158
+  },
+  {
+    "date": "2026-01-19",
+    "city": "Concord",
+    "state": "New Hampshire",
+    "country": "United States",
+    "latitude": 43.2081,
+    "longitude": -71.5376,
+    "temp_max_f": 29.1,
+    "temp_min_f": 19.9,
+    "windspeed_max_mph": 10.8,
+    "precipitation_in": 0.122
+  },
+  {
+    "date": "2026-01-20",
+    "city": "Concord",
+    "state": "New Hampshire",
+    "country": "United States",
+    "latitude": 43.2081,
+    "longitude": -71.5376,
+    "temp_max_f": 21.6,
+    "temp_min_f": 11.6,
+    "windspeed_max_mph": 13.9,
+    "precipitation_in": 0.0
+  },
+  {
+    "date": "2026-01-21",
+    "city": "Concord",
+    "state": "New Hampshire",
+    "country": "United States",
+    "latitude": 43.2081,
+    "longitude": -71.5376,
+    "temp_max_f": 26.8,
+    "temp_min_f": 8.6,
+    "windspeed_max_mph": 12.0,
+    "precipitation_in": 0.0
+  },
+  {
+    "date": "2026-01-22",
+    "city": "Concord",
+    "state": "New Hampshire",
+    "country": "United States",
+    "latitude": 43.2081,
+    "longitude": -71.5376,
+    "temp_max_f": 33.4,
+    "temp_min_f": 19.4,
+    "windspeed_max_mph": 14.4,
+    "precipitation_in": 0.083
+  },
+  {
+    "date": "2026-01-23",
+    "city": "Concord",
+    "state": "New Hampshire",
+    "country": "United States",
+    "latitude": 43.2081,
+    "longitude": -71.5376,
+    "temp_max_f": 25.8,
+    "temp_min_f": 16.3,
+    "windspeed_max_mph": 11.0,
+    "precipitation_in": 0.0
+  },
+  {
+    "date": "2026-01-24",
+    "city": "Concord",
+    "state": "New Hampshire",
+    "country": "United States",
+    "latitude": 43.2081,
+    "longitude": -71.5376,
+    "temp_max_f": 28.5,
+    "temp_min_f": 16.3,
+    "windspeed_max_mph": 8.7,
+    "precipitation_in": 0.154
+  }
+]

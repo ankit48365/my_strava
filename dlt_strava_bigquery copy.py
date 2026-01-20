@@ -35,7 +35,7 @@ def strava_source() -> Any:
         },
         "resource_defaults": {
             "primary_key": "id",
-            "write_disposition": {"disposition": "merge", "strategy": "upsert"},
+            "write_disposition": "merge",
             "endpoint": {
                 "params": {
                     "per_page": 200 # Strava API supports max 200 per page

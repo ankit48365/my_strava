@@ -89,8 +89,8 @@ def generate_rahu_json(start_date, end_date):
 
 if __name__ == "__main__":
     # Define your date range here
-    START_DATE = "2026-1-11"
-    END_DATE = "2026-2-28"
+    START_DATE = "2026-4-21"
+    END_DATE = "2026-5-20"
     
     # Generate the JSON file
     data = generate_rahu_json(START_DATE, END_DATE)
