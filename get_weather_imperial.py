@@ -9,7 +9,7 @@ def save_flattened_weather_next_week_imperial():
 
     # Today and next 7 days
     start_date = date.today()
-    end_date = start_date + timedelta(days=7)
+    end_date = start_date + timedelta(days=15)
 
     # Open-Meteo API with imperial units
     url = (

@@ -67,60 +67,6 @@ def update_secrets_file(access_token, refresh_token, client_id, client_secret):
     
     print(f"✅ Updated {temp_secret_path} with new credentials.")
 
-###################################################################
-## add for cloud secret manager
-# to fake cloud environment, run before pythonn code run >> export K_SERVICE="fake" or export K_SERVICE="strava-job"
-# to unset run from terminal >> unset K_SERVICE
-
-
-def is_running_in_cloud():
-    return os.getenv("K_SERVICE") is not None  # Cloud Run sets this
-
-from google.cloud import secretmanager
-
-def update_cloud_secret(secret_name: str, new_value: str, project_id: str):
-    """Updates a secret in Google Secret Manager with a new value."""
-    client = secretmanager.SecretManagerServiceClient()
-    parent = f"projects/{project_id}/secrets/{secret_name}"
-
-    # Add new version with updated value
-    client.add_secret_version(
-        request={
-            "parent": parent,
-            "payload": {"data": new_value.encode("UTF-8")}
-        }
-    )
-    print(f"🔐 Updated cloud secret: {secret_name}")
-
-####################################################################
-
-def update_secrets_file(access_token, refresh_token, client_id, client_secret):
-    if is_running_in_cloud():
-        # Update secrets in Google Secret Manager
-        project_id = os.getenv("GOOGLE_CLOUD_PROJECT") or "mystrava-464501"
-        update_cloud_secret("strava_access_token", access_token, project_id)
-        update_cloud_secret("strava_refresh_token", refresh_token, project_id)
-        # Optional: update client_id/client_secret if needed
-    else:
-        """Updates the DLT secrets file with the new tokens."""
-        temp_secret_path = ".dlt/temp_secret.toml"
-    
-        lines = [
-            "[sources.strava]",
-            f'access_token  = "{access_token}"',
-            f'refresh_token = "{refresh_token}"',
-            f'client_id     = "{client_id}"',
-            f'client_secret = "{client_secret}"',
-            ""
-        ]
-        
-        os.makedirs(os.path.dirname(temp_secret_path), exist_ok=True)
-        with open(temp_secret_path, "w") as f:
-            f.write("\n".join(lines))
-        
-        print(f"✅ Updated {temp_secret_path} with new credentials.")
-        
-
 if __name__ == "__main__":
     success = refresh_access_token()
     if success:
