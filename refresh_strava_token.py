@@ -1,129 +1,69 @@
-"""Script to refresh Strava access token using the refresh token."""
+"""Refresh the Strava access token using the current refresh token."""
+
 import requests
-import dlt
-import os
+
+from strava_credentials import (
+    StravaTokens,
+    load_strava_credentials,
+    persist_strava_tokens,
+    prime_runtime_strava_tokens,
+    reload_dlt_credentials,
+)
+
+STRAVA_TOKEN_URL = "https://www.strava.com/oauth/token"
 
 
-def refresh_access_token():
-    """Refreshes the Strava access token using the refresh token."""
+def refresh_access_token() -> StravaTokens | None:
+    """Refresh the Strava access token and return the new token pair."""
 
-    # Try Cloud Run env vars first
-    client_id = os.getenv("SOURCES__STRAVA__CLIENT_ID")
-    client_secret = os.getenv("SOURCES__STRAVA__CLIENT_SECRET")
-    access_token = os.getenv("SOURCES__STRAVA__ACCESS_TOKEN")
-    refresh_token = os.getenv("SOURCES__STRAVA__REFRESH_TOKEN")
+    try:
+        credentials = load_strava_credentials()
+    except RuntimeError as exc:
+        print(f"ERROR {exc}")
+        return None
 
-    # Fallback to local secrets if any are missing
-    if not all([client_id, client_secret, access_token, refresh_token]):
-        sec = dlt.secrets.get("sources.strava")
-        client_id = client_id or sec.get("client_id")
-        client_secret = client_secret or sec.get("client_secret")
-        access_token = access_token or sec.get("access_token")
-        refresh_token = refresh_token or sec.get("refresh_token")
+    try:
+        response = requests.post(
+            STRAVA_TOKEN_URL,
+            data={
+                "client_id": credentials.client_id,
+                "client_secret": credentials.client_secret,
+                "refresh_token": credentials.refresh_token,
+                "grant_type": "refresh_token",
+            },
+            timeout=30,
+        )
+        response.raise_for_status()
+    except requests.RequestException as exc:
+        print(f"ERROR Failed to refresh token: {exc}")
+        if exc.response is not None:
+            print(f"Response: {exc.response.text}")
+        return None
 
-    print("🔄 Refreshing Strava access token...")
-
-    # Make request to refresh token
-    response = requests.post("https://www.strava.com/oauth/token", data={
-        "client_id": client_id,
-        "client_secret": client_secret,
-        "refresh_token": refresh_token,
-        "grant_type": "refresh_token"
-    })
-    
-    if response.status_code == 200:
-        token_data = response.json()
-        new_access_token = token_data["access_token"]
-        new_refresh_token = token_data["refresh_token"]
-        
-        print(f"✅ New access token: {new_access_token[:8]}...")
-        print(f"✅ New refresh token: {new_refresh_token[:8]}...")
-        
-        # Update the secrets file
-        update_secrets_file(new_access_token, new_refresh_token, client_id, client_secret)
-        
-        return True
-    else:
-        print(f"❌ Failed to refresh token. Status: {response.status_code}")
-        print(f"Response: {response.text}")
-        return False
-
-def update_secrets_file(access_token, refresh_token, client_id, client_secret):
-    """Updates the DLT secrets file with the new tokens."""
-    temp_secret_path = ".dlt/temp_secret.toml"
-    
-    lines = [
-        "[sources.strava]",
-        f'access_token  = "{access_token}"',
-        f'refresh_token = "{refresh_token}"',
-        f'client_id     = "{client_id}"',
-        f'client_secret = "{client_secret}"',
-        ""
-    ]
-    
-    os.makedirs(os.path.dirname(temp_secret_path), exist_ok=True)
-    with open(temp_secret_path, "w") as f:
-        f.write("\n".join(lines))
-    
-    print(f"✅ Updated {temp_secret_path} with new credentials.")
-
-###################################################################
-## add for cloud secret manager
-# to fake cloud environment, run before pythonn code run >> export K_SERVICE="fake" or export K_SERVICE="strava-job"
-# to unset run from terminal >> unset K_SERVICE
-
-
-def is_running_in_cloud():
-    return os.getenv("K_SERVICE") is not None  # Cloud Run sets this
-
-from google.cloud import secretmanager
-
-def update_cloud_secret(secret_name: str, new_value: str, project_id: str):
-    """Updates a secret in Google Secret Manager with a new value."""
-    client = secretmanager.SecretManagerServiceClient()
-    parent = f"projects/{project_id}/secrets/{secret_name}"
-
-    # Add new version with updated value
-    client.add_secret_version(
-        request={
-            "parent": parent,
-            "payload": {"data": new_value.encode("UTF-8")}
-        }
+    token_data = response.json()
+    return StravaTokens(
+        access_token=token_data["access_token"],
+        refresh_token=token_data["refresh_token"],
     )
-    print(f"🔐 Updated cloud secret: {secret_name}")
 
-####################################################################
 
-def update_secrets_file(access_token, refresh_token, client_id, client_secret):
-    if is_running_in_cloud():
-        # Update secrets in Google Secret Manager
-        project_id = os.getenv("GOOGLE_CLOUD_PROJECT") or "mystrava-464501"
-        update_cloud_secret("strava_access_token", access_token, project_id)
-        update_cloud_secret("strava_refresh_token", refresh_token, project_id)
-        # Optional: update client_id/client_secret if needed
-    else:
-        """Updates the DLT secrets file with the new tokens."""
-        temp_secret_path = ".dlt/temp_secret.toml"
-    
-        lines = [
-            "[sources.strava]",
-            f'access_token  = "{access_token}"',
-            f'refresh_token = "{refresh_token}"',
-            f'client_id     = "{client_id}"',
-            f'client_secret = "{client_secret}"',
-            ""
-        ]
-        
-        os.makedirs(os.path.dirname(temp_secret_path), exist_ok=True)
-        with open(temp_secret_path, "w") as f:
-            f.write("\n".join(lines))
-        
-        print(f"✅ Updated {temp_secret_path} with new credentials.")
-        
+def main() -> int:
+    """Refresh tokens and persist them for the current environment."""
+
+    print("Refreshing Strava access token...")
+    tokens = refresh_access_token()
+    if tokens is None:
+        print("ERROR Token refresh failed. You may need to re-authorize.")
+        return 1
+
+    print("OK Token refreshed")
+    updated_target = persist_strava_tokens(tokens)
+    print(f"OK Updated {updated_target}")
+    prime_runtime_strava_tokens(tokens)
+    reload_dlt_credentials()
+    print("OK Reloaded DLT credentials")
+    return 0
+
 
 if __name__ == "__main__":
-    success = refresh_access_token()
-    if success:
-        print("🎉 Token refresh successful! You can now run your pipeline.")
-    else:
-        print("💥 Token refresh failed. You may need to re-authorize.")
+    raise SystemExit(main())

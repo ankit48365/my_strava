@@ -8,7 +8,6 @@
 *.log
 *.pid
 .dlt/secrets.toml
-.dlt/temp_secret.toml
 # pylint_report.txt
 # README.md
 
