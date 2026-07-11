@@ -49,6 +49,21 @@ def strava_source(access_token: str | None = None) -> Any:
                     },
                 },
             }
+            # {
+            #     "name": "activities",
+            #     "endpoint": {
+            #         "path": "athlete/activities",
+            #         "params": {
+            #             "per_page": 200
+            #         },
+            #         "paginator": {
+            #             "type": "page_number",
+            #             "base_page": 1,
+            #             "page_param": "page",
+            #             "stop_after_empty_page": True
+            #         },
+            #     },
+            # }
         ],
     }
 
